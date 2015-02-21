@@ -32,8 +32,8 @@ var buildData = function() {
 $(function() {
   $('#build-button').on('click', function() {
     try {
-      var data = buildData().slice(0, 50);
-      $("#facebook-friends").jQCloud(data, {});
+      var data = buildData();
+      $("#facebook-friends").jQCloud(data.slice(0,50), {});
       $("#facebook-friends-list").val('');
       data.forEach(function(user) {
         var val = $("#facebook-friends-list").val();
